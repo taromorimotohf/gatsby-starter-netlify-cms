@@ -18,6 +18,15 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Image", name: "image", widget: "image"}
+
+  - name: 'faq' # Used in routes, ie.: /admin/collections/:slug/edit
+    label: 'よくあるご質問' # Used in the UI
+    folder: 'src/pages/faq'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: '質問', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: '答え', name: 'body', widget: 'markdown' }
 
   - name: "pages"
     label: "Pages"
