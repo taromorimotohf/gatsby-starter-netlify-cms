@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: master
 
+publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
 
@@ -20,13 +21,14 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Image", name: "image", widget: "image"}
 
-  - name: 'faq' # Used in routes, ie.: /admin/collections/:slug/edit
-    label: 'よくあるご質問' # Used in the UI
-    folder: 'src/pages/faq'
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - { label: '質問', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: '答え', name: 'body', widget: 'markdown' }
+  # - name: 'faq' # Used in routes, ie.: /admin/collections/:slug/edit
+  #   label: 'よくあるご質問' # Used in the UI
+  #   folder: 'src/pages/faq'
+  #   create: true # Allow users to create new documents in this collection
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #   fields: # The fields each document in this collection have
+  #     - { label: '質問', name: 'title', widget: 'string', tagname: 'h1' }
+  #     - { label: '答え', name: 'body', widget: 'markdown' }
 
   - name: "pages"
     label: "Pages"
